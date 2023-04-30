@@ -1,0 +1,103 @@
+body {
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.input__text {
+    margin: 20px;
+    max-width: 1100px;
+    width: 100%;
+    height: 200px;
+    border: solid 1px;
+    border-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px;
+    padding: 5px 0;
+    background: rgb(32, 32, 111);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    transition: bottom 0.4s;
+}
+
+
+
+.keyboard__keys {
+    text-align: center;
+    margin: 10px;
+}
+
+.key {
+    height: 45px;
+    width: 60px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(68, 68, 102);
+    color:rgb(204, 204, 209);
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+/* .key.tab,
+.key.del { 
+    width:6.5%;   
+} */
+.enter,
+.caps-lock,
+.backspace, 
+.shift {
+    width: 126px;
+}
+
+.space {
+    width: 456px;
+}
+.key:hover {
+    background: rgba(35, 28, 28, 0.12);;
+
+}
+.key:active {
+    background:  #6cc8b6; 
+}
+
+.keyboard__key--wide {
+    width: 12%;
+}
+
+.keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboard__key--active::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+    background: #08ff00;
+}
+
+.keyboard__key--dark {
+    background: rgba(0, 0, 0, 0.25);
+}
