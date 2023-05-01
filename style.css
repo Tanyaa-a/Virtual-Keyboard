@@ -70,10 +70,13 @@ body {
     background: rgba(35, 28, 28, 0.12);;
 
 }
-.key:active {
+.key-active {
     background:  #6cc8b6; 
 }
 
+.key:active {
+    background:  #6cc8b6;
+}
 .keyboard__key--wide {
     width: 12%;
 }

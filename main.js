@@ -279,7 +279,7 @@
 // let value = "";
 // let capsLock = false;
 import createKeys from "./createKeys.js";
-//import pressKeys from "./pressKeys.js";
+import pressKeys from "./pressKeys.js";
 
 const inputWindow = document.createElement("textarea");
 const mainElement = document.createElement("div");
@@ -305,18 +305,24 @@ function init() {
       });
     });
   });
-  
-  const buttons = document.querySelectorAll('.key')
-    const textArea = document.querySelector('.input__text') 
 
-    buttons.forEach(key => {
-        key.addEventListener('click', () => {
-            textArea.value += key.innerText
-        })
+  const buttons = document.querySelectorAll('.key')
+  const textArea = document.querySelector('.input__text')
+
+  buttons.forEach(key => {
+    key.addEventListener('click', () => {
+      textArea.value += key.innerText
     })
+  })
+
+  // textArea.addEventListener("keydown", e => {
+  //   console.log(e)
+  // })
+
+  pressKeys();
 }
 
-init();
+  init();
 
  
 
