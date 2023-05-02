@@ -1,5 +1,6 @@
 import createKeys from "./createKeys.js";
 import pressKeys from "./pressKeys.js";
+//import convertSpecialKeys from "./convertSpecialKeys.js";
 //import convertToClassName from "./convertToClassName.js";
 
 const inputWindow = document.createElement("textarea");
@@ -36,6 +37,7 @@ function init() {
     });
   });
   pressKeys();
+  //convertSpecialKeys();
   //convertToClassName();
 }
 
