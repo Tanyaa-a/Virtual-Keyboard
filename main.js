@@ -1,11 +1,14 @@
 import createKeys from "./createKeys.js";
 import pressKeys from "./pressKeys.js";
-//import convertSpecialKeys from "./convertSpecialKeys.js";
-//import convertToClassName from "./convertToClassName.js";
+
 
 const inputWindow = document.createElement("textarea");
 const mainElement = document.createElement("div");
 const keysContainerElement = document.createElement("div");
+
+document.onkeydown = function () { 
+
+}
 
 function init() {
   inputWindow.classList.add("input__text");
@@ -17,8 +20,7 @@ function init() {
   document.body.appendChild(mainElement);
   mainElement.appendChild(keysContainerElement);
 
-  //pressKeys();
-  //createKeys()
+ 
 
   document.querySelectorAll(".use-keyboard-input").forEach((element) => {
     element.addEventListener("focus", () => {
@@ -37,8 +39,7 @@ function init() {
     });
   });
   pressKeys();
-  //convertSpecialKeys();
-  //convertToClassName();
+  
 }
 
 init();
