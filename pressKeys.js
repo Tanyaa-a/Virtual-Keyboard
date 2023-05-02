@@ -1,5 +1,3 @@
-
-
 export default function pressKeys() {
     
     const textArea = document.querySelector('.input__text')
