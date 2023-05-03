@@ -20,8 +20,6 @@ function init() {
   document.body.appendChild(mainElement);
   mainElement.appendChild(keysContainerElement);
 
- 
-
   document.querySelectorAll(".use-keyboard-input").forEach((element) => {
     element.addEventListener("focus", () => {
       open(element.value, (currentValue) => {
