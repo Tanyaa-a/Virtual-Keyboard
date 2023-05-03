@@ -68,7 +68,7 @@ export default function createKeys() {
 
   const specialKeyCodes = {
     delete: 8,
-    backslash: 220,
+    'backslash': 220,
     tab: 9,
     return: 13,
     "shift right-shift": 16,
@@ -85,11 +85,7 @@ export default function createKeys() {
     9: 57,
   };
 
-  let keyboards = [];
-  document.onkeydown = function (e) {
-    console.log(e);
-    keyboards.push(e.charCode);
-  };
+ 
 
   keyLayout.forEach((key, index) => {
     let keyElement;
@@ -165,9 +161,11 @@ export default function createKeys() {
     }
 
     if (key === "\\") {
-      keyElement.textContent = "\\";
       keyElement.dataset.key = "220";
     }
+    if (key === "9") {
+        keyElement.dataset.key = "57";
+      }
 
     if (
       Object.prototype.hasOwnProperty.call(specialKeyCodes, key.toLowerCase())
