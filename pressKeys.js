@@ -57,11 +57,15 @@ export default function pressKeys() {
           keyIdentifier = '40';
          
         break;
+        
       
-        case "Backslash":
+        case "\\":
           keyIdentifier = "220";
-          break;
+        break;
       
+          case '9':
+            keyIdentifier = '57';
+            break;
       default:
         keyIdentifier = key.toUpperCase();
       

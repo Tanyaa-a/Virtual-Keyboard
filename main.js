@@ -1,7 +1,6 @@
 import createKeys from "./createKeys.js";
 import pressKeys from "./pressKeys.js";
 
-
 const inputWindow = document.createElement("textarea");
 const mainElement = document.createElement("div");
 const keysContainerElement = document.createElement("div");
@@ -37,7 +36,12 @@ function init() {
     });
   });
   pressKeys();
-  
+  const addOperatingSystemInfo = () => {
+      const osInfoParagraph = document.createElement("p");
+      osInfoParagraph.textContent = "The keyboard was created on macOS.";
+      document.body.appendChild(osInfoParagraph);   
+  };
+  addOperatingSystemInfo();
 }
 
 init();
